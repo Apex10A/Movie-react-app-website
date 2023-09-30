@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Epilogue:wght@400;500;600;700&family=Josefin+Sans:wght@300;400;500;600;700&family=Lily+Script+One&family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat+Alternates:wght@400;600&family=Montserrat:wght@300;500&family=Oleo+Script+Swash+Caps:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,400;1,600;1,700;1,800;1,900;1,1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,400;1,600;1,700;1,800;1,900;1,1000&family=Quicksand:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+/*set the scroll behavior to smooth*/
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --whiteColor: #fff;
+  --lightColor: #ebe0e0;
+  --brownColor: brown;
+  --blackColor: #000;
+  --font-size-head: 30px;
+  --font-size-paragraph: 17px;
+}
+/* Basic styles for the navigation */
+.nav-link {
+  background-color: #151521;
+  padding-top: 15px;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 100; /* Ensure the navigation is above other content */
+}
+
+/* Center the navigation items */
+.nav-part {
+  display: flex;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  background-size: cover;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Add some padding to the sides */
+}
+
+/* Styles for the menu items */
+@media (min-width: 768px) {
+  .menu ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    padding-left: 27px;
+  }
+  .logo {
+    margin-left: 18px;
+  }
+}
+
+.menu a {
+  color: #ebe0e0;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.menu a:hover {
+  color: #d48216;
+  padding-bottom: 7px;
+}
+
+/* Center the login button */
+#logger {
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    z-index: 99;
+    width: 50%; /* Hide the menu on larger screens */
+  }
+  .loggin {
+    display: flex;
+    padding-bottom: 15px;
+    align-items: center;
+  }
+  ul {
+    padding: 20px 0;
+  }
+  li {
+    list-style: none;
+    padding-left: 20px;
+    font-weight: bold;
+    opacity: 0.7;
+  }
+  a {
+  }
+  .menu.show {
+    display: block; /* Show the menu when the button is clicked */
+    background-color: #333;
+    position: absolute;
+    top: 50px; /* Adjust this to match the height of your navbar */
+    right: 20px;
+  }
+  ul {
+    display: block;
+    width: 50%;
+  }
+  .menu.show a {
+    display: block;
+    color: #ebe0e0;
+    text-decoration: none;
+    padding: 10px;
+  }
+  .nav-part {
+    display: flex;
+    align-items: center;
+  }
+  .cent {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Style the login button */
+  #centbtn {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #ebe0e0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+  }
+  /* Style the hamburger icon */
+  #hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 10px;
+  }
+  #close-btn {
+    position: absolute;
+    color: #fff;
+  }
+}
+.close-btn {
+  display: none; /* Initially hide the close button */
+  font-size: 24px;
+  color: #fff;
+  z-index: 99;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Display the close button when the menu is shown */
+.menu.show ~ .close-btn {
+  display: block;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none; /* Hide the menu on smaller screens */
+  }
+}
+.whiti {
+  background-color: #f0ebf8;
+}
+.form-goog {
+  width: 100%;
+  height: 100%;
+}
+.google-form {
+  width: 100%;
+  height: 100vh;
+  
+}
+/*footer*/
+.footer {
+  background-color: #333;
+  position: relative;
+  bottom: 100px;
+  color: #ebe0e0;
+}
+.footer-first {
+  font-size: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+.footer-first b {
+  font-size: 17px;
+  padding-bottom: 2px;
+}
+.copyright {
+  padding-bottom: 15px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1000px) {
+  .footer-content {
+    display: block;
+  }
+  .footer-content p {
+    padding-bottom: 15px;
+    font-weight: bold;
+    opacity: 0.7;
+    word-spacing: 2px;
+  }
+  .footer-links {
+    display: block;
+    line-height: 30px;
+    margin: auto;
+    text-align: center;
+  }
+  .footer {
+    padding: 35px 30px 25px 30px;
+  }
+}
+@media (min-width: 1000px) {
+  .footer-links {
+    display: block;
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+  }
+  .footer {
+    padding: 70px 40px 70px 40px;
+  }
+}
+.adress {
+  display: block;
+  font-size: 15px;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+.footer-links a {
+  color: #ebe0e0;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+#suppo {
+}
+.btne {
+  padding: 15px 35px;
+  margin-top: 20px;
+  border-radius: 30px;
+  border: 2px solid #d48216;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 1s all ease-in-out 0s;
+}
+.btner {
+  padding: 15px 35px;
+  margin-top: 20px;
+  border-radius: 30px;
+  background-color: #d48216;
+  position: relative;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  outline: none;
+  color: #151521;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 1s all ease-in-out 0s;
+}
+#btnxe {
+  text-transform: uppercase;
+  opacity: 0.8;
+}
